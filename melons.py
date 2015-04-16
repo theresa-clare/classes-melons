@@ -1,5 +1,8 @@
 """This file should have our melon-type classes in it."""
 
+BASE_PRICE = 5
+
+
 
 class WatermelonOrder(object):
     species = "Watermelon"
@@ -11,7 +14,9 @@ class WatermelonOrder(object):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 0   # TODO, calculate the real amount!
+        total = BASE_PRICE * qty
+        if qty >= 3:
+            total *= 0.75
 
         return total
 
@@ -23,7 +28,13 @@ class CantaloupeOrder(object):
     seasons = ["Spring", "Summer"]
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = BASE_PRICE * qty 
+
+        if qty >= 5:
+            total *= 0.5
+
+        return total
 
 class CasabaOrder(object):
     species = "Casaba"
@@ -33,7 +44,10 @@ class CasabaOrder(object):
     seasons = ["Spring", "Summer", "Winter", "Fall"]
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = (BASE_PRICE + 1) * 1.5
+
+        return total
 
 class SharlynOrder(object):
     species = "Sharlyn"
@@ -43,7 +57,10 @@ class SharlynOrder(object):
     seasons = ["Summer"]
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = BASE_PRICE * qty * 1.5
+
+        return total
 
 class SantaClausOrder(object):
     species = "Santa Claus"
@@ -53,7 +70,10 @@ class SantaClausOrder(object):
     seasons = ["Winter", "Spring"]
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = BASE_PRICE * qty * 1.5
+
+        return total
 
 class ChristmasOrder(object):
     species = "Christmas"
@@ -63,7 +83,10 @@ class ChristmasOrder(object):
     seasons = ["Winter", "Spring"]
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = BASE_PRICE * qty
+
+        return total
 
 class HornedMelonOrder(object):
     species = "Horned Melon"
@@ -73,7 +96,10 @@ class HornedMelonOrder(object):
     seasons = ["Summer"]
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = BASE_PRICE * qty * 1.5
+
+        return total
 
 class XiguaOrder(object):
     species = "Xigua"
@@ -83,7 +109,10 @@ class XiguaOrder(object):
     seasons = ["Summer"]
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = BASE_PRICE * qty * 1.5 * 2
+
+        return total
 
 class OgenOrder(object):
     species = "Ogen"
@@ -93,4 +122,7 @@ class OgenOrder(object):
     seasons = "Spring, Summer"
 
     def get_price(self, qty):
-        pass
+        """Calculate price, given a number of melons ordered."""
+        total = (BASE_PRICE + 1) * qty
+
+        return total
